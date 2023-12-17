@@ -10,7 +10,36 @@
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
     <!-- Bootstrap + Steller main styles -->
 	<link rel="stylesheet" href="assets/css/steller.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
 </head>
+<script>
+    // Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+    </script>
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
 
     <!-- Page navigation -->
@@ -158,8 +187,8 @@
     <!-- Skills section -->
     <section class="section">
         <div class="container text-center">
-            <h6 class="subtitle">Skills</h6>
-            <h6 class="section-title mb-4">Why Choose me</h6>
+            <h6 class="subtitle">Мои навыки</h6>
+            <h6 class="section-title mb-4">Почему выбрать именно меня</h6>
             <p class="mb-5 pb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In alias dignissimos. <br> rerum commodi corrupti, temporibus non quam.</p>
 
             <div class="row text-left">
@@ -206,8 +235,9 @@
                         <div class="overlay">
                             <div class="overlay-infos">
                                 <h5>Анализ велосипедных поездок в Лондоне</h5>
-                                <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
+                                <a href="#openModal"><i class="ti-zoom-in"></i></a>
                                 <a href="javascript:void(0)"><i class="ti-link"></i></a>
+                                
                             </div>  
                         </div>
                     </div>
@@ -264,7 +294,33 @@
                                 <a href="javascript:void(0)"><i class="ti-link"></i></a>
                             </div>                              
                         </div>
-                    </div>                  
+                    </div>
+                    <a href="#openModal">Click me to open modal window</a>
+
+<div id="openModal" class="modalWindow">
+	<div>
+		
+		<div class="modalHeader">
+			<h5>Анализ велосипедных поездок в Лондоне</h5>
+			<a href="#close" title="Close" class="close ti-close"></a>
+		</div>
+		
+		<div class="modalContent">
+            <video id="video-player" width="70%" controls>
+                <source src="London Bike Rides.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h6 class="subtitle orange">К сожалению, данный файл не поддерживается Tableau Public, поэтому я произвел запись экрана из Tableau Desktop.</h6>
+
+		</div>
+		
+		<!-- <div class="modalFooter">
+			<a href="#cancel" title="Cancel" class="cancel">Cancel</a>
+			<a href="#ok" title="Ok" class="ok">Apply</a>
+			<div class="clear"></div>
+		</div> -->
+	</div>
+</div>
                 </div>
             </div>
 
@@ -274,62 +330,6 @@
 
     
 
-    <!-- Blog Section -->
-    <section id="blog" class="section">
-        <div class="container text-center">
-            <h6 class="subtitle">My Blogs</h6>
-            <h6 class="section-title mb-4">Latest News</h6>
-            <p class="mb-5 pb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In alias dignissimos. <br> rerum commodi corrupti, temporibus non quam.</p>
-
-            <div class="row text-left">
-                <div class="col-md-4">
-                    <div class="card border mb-4">
-                        <img src="assets/imgs/blog-1.jpg" alt="" class="card-img-top w-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Designe for Everyone</h5>
-                            <div class="post-details">
-                                <a href="javascript:void(0)">Posted By: Admin</a>
-                                <a href="javascript:void(0)"><i class="ti-thumb-up"></i> 456</a>
-                                <a href="javascript:void(0)"><i class="ti-comment"></i> 123</a>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut ad vel dolorum, iusto velit, minima? Voluptas nemo harum impedit nisi.</p>
-                            <a href="javascript:void(0)">Read More..</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card border mb-4">
-                        <img src="assets/imgs/blog-2.jpg" alt="" class="card-img-top w-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Web Layouts</h5>
-                            <div class="post-details">
-                                <a href="javascript:void(0)">Posted By: Admin</a>
-                                <a href="javascript:void(0)"><i class="ti-thumb-up"></i> 456</a>
-                                <a href="javascript:void(0)"><i class="ti-comment"></i> 123</a>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut ad vel dolorum, iusto velit, minima? Voluptas nemo harum impedit nisi.</p>
-                            <a href="javascript:void(0)">Read More..</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card border mb-4">
-                        <img src="assets/imgs/blog-3.jpg" alt="" class="card-img-top w-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Bootstrap Framework</h5>
-                            <div class="post-details">
-                                <a href="javascript:void(0)">Posted By: Admin</a>
-                                <a href="javascript:void(0)"><i class="ti-thumb-up"></i> 456</a>
-                                <a href="javascript:void(0)"><i class="ti-comment"></i> 123</a>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut ad vel dolorum, iusto velit, minima? Voluptas nemo harum impedit nisi.</p>
-                            <a href="javascript:void(0)">Read More..</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Hire me section -->
     <section class="bg-gray p-0 section">
