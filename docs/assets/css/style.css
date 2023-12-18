@@ -21,6 +21,8 @@
     .modalWindow > div {
     width: 60%;
     height: 70%;
+    overflow-y: auto;
+    max-height: 600px;
     position: relative;
     margin: 10% auto;
     -webkit-border-radius: 5px;
