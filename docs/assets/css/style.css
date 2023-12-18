@@ -1,4 +1,26 @@
+.social-item,
+  form {
+    display: inline-block;
+    vertical-align: middle;
+  }
 
+  .marg {
+    margin-left: 10px; /* Adjust the margin as needed */
+  }
+  .social-item img {
+    width: 40px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .social-item:hover img {
+    transform: scale(1.2); /* You can adjust the scale factor as needed */
+  }
+  .card-body {
+    height: 250px;
+  }
+  .custom-card {
+    padding: 0 15px;
+  }
 .modalWindow {
     position: fixed;
     top: 0;
@@ -30,8 +52,10 @@
     border-radius: 5px;
     background: #fff;
     }
-    .modalWindow .modalHeader { padding: 10px 25px 0px 25px; }
-    .modalWindow .modalContent { padding: 10px 25px 10px 25px; }
+    .modalWindow .modalHeader { padding: 10px 25px 0px 25px; 
+        margin-top: 20px;}
+    .modalWindow .modalContent { padding: 20px 25px 10px 25px; 
+        margin-top: 20px;}
     /* .modalWindow .modalFooter { padding: 8px 20px 8px 20px; }
     .modalFooter {
     background: #F1F1F1;
