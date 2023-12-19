@@ -11,6 +11,22 @@
     width: 40px;
     transition: transform 0.3s ease-in-out;
   }
+  .divine {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+  }
+  .modalContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .divine img {
+    margin-right: 10px;
+    width: 25px; /* Adjust the margin as needed */
+  }
 
   .social-item:hover img {
     transform: scale(1.2); /* You can adjust the scale factor as needed */
